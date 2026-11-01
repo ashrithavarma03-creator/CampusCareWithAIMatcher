@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.campuscare.campuscarewithaimatcher.controller.StaffController">
+    <top><HBox spacing="10" style="-fx-padding:10; -fx-background-color:#E8F5E9;"><Label text="Staff Dashboard - Verify Items" style="-fx-font-size:16px; -fx-font-weight:bold;"/><Button text="Logout" onAction="#onLogout" style="-fx-background-color:#f44336; -fx-text-fill:white;"/></HBox></top>
+    <center><TableView fx:id="table"><columns><TableColumn fx:id="nameCol" text="Item Name" prefWidth="200"/><TableColumn fx:id="typeCol" text="Type" prefWidth="100"/><TableColumn fx:id="contactCol" text="Contact" prefWidth="150"/></columns></TableView></center>
+</BorderPane>

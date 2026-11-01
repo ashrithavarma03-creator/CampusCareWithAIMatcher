@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox alignment="CENTER" spacing="15" stylesheets="@style.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.campuscare.campuscarewithaimatcher.controller.LoginController" prefWidth="900" prefHeight="600">
+    <Label text="CampusCare AI - Login" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+    <TextField fx:id="usernameField" promptText="Username - student/admin/staff" maxWidth="300"/>
+    <PasswordField fx:id="passwordField" promptText="Password - same as username" maxWidth="300"/>
+    <Button text="Login" onAction="#onLogin" style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+    <Label fx:id="errorLabel" style="-fx-text-fill: red;"/>
+    <Label text="Hint: student/student | admin/admin | staff/staff" style="-fx-text-fill: grey;"/>
+</VBox>

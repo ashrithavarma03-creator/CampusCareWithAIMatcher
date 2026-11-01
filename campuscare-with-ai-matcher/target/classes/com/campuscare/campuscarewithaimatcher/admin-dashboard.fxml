@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.campuscare.campuscarewithaimatcher.controller.AdminController">
+    <top><HBox spacing="15" style="-fx-padding:15; -fx-background-color:#FFF3E0;"><Label text="Admin Dashboard" style="-fx-font-size:16px; -fx-font-weight:bold;"/><Label fx:id="totalLabel" text="Total:0"/><Label fx:id="lostLabel" text="LOST:0"/><Label fx:id="foundLabel" text="FOUND:0"/><TextField fx:id="searchField" promptText="🔍 Search"/><Button text="Logout" onAction="#onLogout" style="-fx-background-color:#f44336; -fx-text-fill:white;"/></HBox></top>
+    <center><TableView fx:id="table"><columns><TableColumn fx:id="nameCol" text="Name" prefWidth="150"/><TableColumn fx:id="typeCol" text="Type" prefWidth="80"/><TableColumn fx:id="contactCol" text="Contact" prefWidth="120"/><TableColumn fx:id="dateCol" text="Date" prefWidth="100"/><TableColumn fx:id="statusCol" text="Status" prefWidth="80"/></columns></TableView></center>
+    <bottom><VBox spacing="5" style="-fx-padding:10;"><HBox spacing="10"><Button text="Delete Selected" onAction="#onDelete" style="-fx-background-color:red; -fx-text-fill:white;"/><Label text="SMS Logs"/></HBox><ListView fx:id="smsList" prefHeight="120"/></VBox></bottom>
+</BorderPane>

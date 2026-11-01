@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.campuscare.campuscarewithaimatcher.controller.StudentController">
+    <top>
+        <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-padding: 10; -fx-background-color: #E3F2FD;">
+            <Label text="Student Dashboard - CampusCare AI" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <TextField fx:id="searchField" promptText="🔍 Fast Search - wallet..." prefWidth="200"/>
+            <Button text="Logout" onAction="#onLogout" style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8;"/>
+        </HBox>
+    </top>
+    <left>
+        <VBox spacing="10" style="-fx-padding: 15;" prefWidth="300">
+            <Label text="Add LOST/FOUND Item" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+            <TextField fx:id="itemNameField" promptText="Item Name - Ex: Black Wallet"/>
+            <ComboBox fx:id="typeCombo" promptText="Select Type - LOST/FOUND" prefWidth="270"/>
+            <TextField fx:id="contactField" promptText="Mobile Number - Ex: 98765..."/>
+            <TextField fx:id="descField" promptText="Description + Place"/>
+            <Button text="📷 Choose Image" onAction="#onChooseImage" maxWidth="1.7976931348623157E308"/>
+            <ImageView fx:id="itemImageView" fitHeight="100" fitWidth="150" preserveRatio="true"/>
+            <Button text="Post Item - Raise Complaint" onAction="#onAddClick" maxWidth="1.7976931348623157E308" style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-weight: bold;"/>
+            <Label fx:id="matchLabel" wrapText="true" style="-fx-text-fill: green; -fx-font-weight: bold;"/>
+        </VBox>
+    </left>
+    <center>
+        <TableView fx:id="table">
+            <columns>
+                <TableColumn fx:id="nameCol" text="Item Name" prefWidth="150"/>
+                <TableColumn fx:id="typeCol" text="LOST/FOUND" prefWidth="100"/>
+                <TableColumn fx:id="contactCol" text="Contact" prefWidth="120"/>
+                <TableColumn fx:id="dateCol" text="Date" prefWidth="100"/>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>
